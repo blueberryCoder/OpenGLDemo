@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.blueberry.gl.databinding.ActMainBinding
+import com.blueberry.gl.texture.TextureActivity
 import com.blueberry.gl.triangle.TriangleActivity
 import com.blueberry.gl.utils.Logger
 
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnTriangle.setOnClickListener {
             startActivity(Intent(this, TriangleActivity::class.java))
+        }
+        binding.btnTexture.setOnClickListener {
+            startActivity(Intent(this, TextureActivity::class.java))
         }
         val activityManager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val deviceConfigurationInfo = activityManager.deviceConfigurationInfo
