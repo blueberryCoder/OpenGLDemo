@@ -28,7 +28,12 @@ object GL30Util {
         val success = intArr[0]
         if (success == 0) {
             val info = GLES30.glGetShaderInfoLog(shader)
-            Logger.e(TAG, "load shader failed $info")
+            val shaderType = when (type) {
+                GLES30.GL_VERTEX_SHADER -> "vertex"
+                GLES30.GL_FRAGMENT_SHADER -> "fragment"
+                else -> "unknown"
+            }
+            Logger.e(TAG, "load $shaderType shader failed $info")
             GLES30.glDeleteShader(shader)
             shader = 0
         }

@@ -2,7 +2,6 @@ package com.blueberry.gl.texture
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.blueberry.gl.R
 import com.blueberry.gl.databinding.ActTextureBinding
 
 class TextureActivity : AppCompatActivity() {

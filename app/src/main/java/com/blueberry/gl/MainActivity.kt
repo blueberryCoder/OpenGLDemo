@@ -9,6 +9,7 @@ import com.blueberry.gl.databinding.ActMainBinding
 import com.blueberry.gl.texture.TextureActivity
 import com.blueberry.gl.triangle.TriangleActivity
 import com.blueberry.gl.utils.Logger
+import com.blueberry.gl.yuv.YuvActivity
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnTexture.setOnClickListener {
             startActivity(Intent(this, TextureActivity::class.java))
+        }
+        binding.btnYuv.setOnClickListener {
+            startActivity(Intent(this, YuvActivity::class.java))
         }
         val activityManager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val deviceConfigurationInfo = activityManager.deviceConfigurationInfo

@@ -2,7 +2,6 @@ package com.blueberry.gl.triangle
 
 import android.opengl.GLES30
 import android.opengl.GLSurfaceView.Renderer
-import com.blueberry.gl.utils.GL20Util
 import com.blueberry.gl.utils.GL30Util
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
