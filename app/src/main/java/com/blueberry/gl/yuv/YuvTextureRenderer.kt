@@ -1,5 +1,6 @@
 package com.blueberry.gl.yuv
 
+import android.app.Activity
 import android.opengl.GLES30
 import android.opengl.GLSurfaceView
 import com.blueberry.gl.utils.GL30Util
@@ -9,7 +10,7 @@ import java.nio.FloatBuffer
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
 
-class YuvTextureRenderer(private val context: YuvActivity) : GLSurfaceView.Renderer {
+class YuvTextureRenderer(private val context: Activity) : GLSurfaceView.Renderer {
 
     private val vertexShaderCode = """
         #version 300 es

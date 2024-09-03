@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.blueberry.gl.databinding.ActMainBinding
+import com.blueberry.gl.fbo.FboActivity
 import com.blueberry.gl.texture.TextureActivity
 import com.blueberry.gl.triangle.TriangleActivity
 import com.blueberry.gl.utils.Logger
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnYuv.setOnClickListener {
             startActivity(Intent(this, YuvActivity::class.java))
+        }
+        binding.btnFbo.setOnClickListener {
+            startActivity(Intent(this, FboActivity::class.java))
         }
         val activityManager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val deviceConfigurationInfo = activityManager.deviceConfigurationInfo

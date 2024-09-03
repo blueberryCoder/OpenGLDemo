@@ -40,4 +40,14 @@ object GL30Util {
         return shader
     }
 
+    fun checkLinkProgram(program: Int) {
+        // 检查链接状态
+        val intArr = IntArray(1)
+        GLES30.glGetProgramiv(program, GLES30.GL_LINK_STATUS, intArr, 0)
+        if (intArr[0] == GLES30.GL_FALSE) {
+            val str = GLES30.glGetProgramInfoLog(program)
+            throw RuntimeException("Load program failed: $str")
+        }
+    }
+
 }
